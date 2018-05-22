@@ -1,0 +1,58 @@
+
+.notes-wrapper {
+    max-height: 220px;
+    overflow-y: scroll;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+
+        .note {
+            position: relative;
+            border: 1px solid #eee;
+
+            &:not(:first-child) {
+                margin-top: -1px;
+            }
+
+            &:hover {
+
+                .note-menu {
+                    display: block;
+                }
+            }
+
+            .note-body {
+                width: calc(100% - 50px);
+                margin-left: 8px;
+                padding: 3px;
+
+                textarea {
+                    border: none;
+                    font-size: 13px;
+                    outline: none;
+                    resize: none;
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+
+            .note-menu {
+                position: absolute;
+                right: 8px;
+                padding: 5px;
+
+                .menu-item {
+                    padding: 5px;
+                    display: inline;
+                    cursor: pointer;
+
+                    &:hover {
+                        color:red;
+                    }
+                }
+            }
+        }
+    }
+}

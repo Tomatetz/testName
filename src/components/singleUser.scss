@@ -1,0 +1,14 @@
+@import "../assets/variables.scss";
+
+.user-actions {
+    display: flex;
+
+    >div {
+        margin: 10px;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-magenta;
+        }
+    }
+}

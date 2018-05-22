@@ -1,0 +1,77 @@
+@import "../../assets/variables.scss";
+.select-wrapper {
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-left: 15px;
+  
+    select {
+      padding: 3px 8px;
+      width: 130%;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      background-image: none;
+      -webkit-appearance: none;
+      font-size: 13px;
+  
+      &:focus {
+          outline: none;
+      }
+    }
+  }
+  .user-item-body {
+      flex-direction: column;
+
+        .empty {
+            color:red;
+        }
+  
+      .editable {
+              display: none;
+      }
+  
+      &.allowEdit {
+  
+          .editable {
+              display: block;
+          }
+  
+          .non-editable {
+              display: none;
+          }
+      }
+
+      &.newUserForm {
+        >div {
+          justify-content: space-between;
+        }
+      }
+  
+      >div {
+          display: flex;
+          margin: 10px 0;
+
+          &.notes-area {
+            flex-direction: column;
+          }
+  
+          label {
+              margin-right: 10px;
+              color: $color-magenta;
+              text-align: left;
+
+              .add-note {
+                  color: #ccc;
+                  position: relative;
+                  top: 3px;
+
+                  &:hover {
+                    color: $color-magenta;
+                    cursor: pointer;
+                  }
+              }
+          }
+      }
+  }
